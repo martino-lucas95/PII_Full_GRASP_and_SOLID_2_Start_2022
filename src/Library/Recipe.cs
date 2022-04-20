@@ -24,7 +24,7 @@ namespace Full_GRASP_And_SOLID.Library
         {
             this.steps.Remove(step);
         }
-        /*Utilizo Expert ya que conoce todos los pasos(es la encargada de agregarlos o eliminarlos), obtiene el costo de la clase Step, y con estos datos puede determinar el costo total de produccion e imprimirlo en consola*/
+        /*Utilizo Expert ya que conoce todos los pasos (es la encargada de agregarlos o eliminarlos), obtiene el costo de la clase Step, y con estos datos puede determinar el costo total de produccion e imprimirlo en consola*/
 
         public double GetProductionCost()
         {
@@ -37,14 +37,17 @@ namespace Full_GRASP_And_SOLID.Library
 
             return result;
         }
-        public void PrintRecipe()
+
+        /*Se mantiene el texto para imprimir en Recipe dado que es quien conoce toda la informacion necesaria de la receta para colaborar con la impresora y que la misma pueda imprimir ese texto*/
+        public string TextToPrint()
         {
-            Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
+            string result = ($"Receta de {this.FinalProduct.Description}:\n");
             foreach (Step step in this.steps)
             {
-                Console.WriteLine($"{step.Quantity} de {step.Input.Description} usando {step.Equipment.Description} durante {step.Time} || Sub-Total: $ {step.GetstepCost()}");
+                result += ($"{step.Quantity} de {step.Input.Description} usando {step.Equipment.Description} durante {step.Time} || Sub-Total: $ {step.GetstepCost()}\n");
             }
-            Console.WriteLine($"Costo Total: $ {GetProductionCost()}");
+            result += ($"Costo Total: $ {GetProductionCost()}");
+            return result;
         }
     }
 }
