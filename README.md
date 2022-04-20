@@ -6,20 +6,8 @@ En este programa trabajaremos con recetas de cocina que involucran ingredientes 
 
 ## Desafío(s)
 
-➡️ **Agregar la responsabilidad de calcular el costo total de producir un producto final**:
+Para imprimir una receta se necesita información de la receta pero también se necesita saber cómo y dónde imprimir.
 
-`double GetProductionCost()`
+➡️ **Crear una clase ConsolePrinter para imprimir las recetas en la consola en lugar que las recetas se impriman a sí mismas.**
 
-El calculo de costo total es el siguiente:
-
-Costo insumos = Sumatoria de costo unitario de los insumos,
-
-Costo equipamiento = Sumatoria de tiempo de uso x costo/hora del equipo para todos los pasos de la receta,
-
-Costo total = costo insumos + costo equipamiento
-
-➡️ **¿Qué patrón o principio usan para asignar esta responsabilidad?**
-Escriban la respuesta en comentarios en el código.
-
-
-➡️ **Agregar al final de la impresión de la receta el costo total de producción que se obtiene usando el método recién agregado.**
+➡️ **¿Qué patrones o principios usan para determinar cómo implementar este cambio? Escriban la respuesta en comentarios en el código.**
